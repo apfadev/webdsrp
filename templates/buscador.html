@@ -1,0 +1,426 @@
+{% extends "layout2.html" %}
+{% block styles %}
+<link rel="stylesheet" href="/static/multiselect-easy/easySelectStyle.css" />
+{% endblock %}
+{% block contenidoprincipal %}
+<div class="row">
+    <h2 class="d-none display-12  texto-rojoraro">Contacto</h2>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12 ">
+            <div
+                class="d-flex justify-content-center align-items-center p-3 my-3 text-black bg-purple rounded shadow-sm">
+                <h2 class="display-12  texto-rojoraro">Buscar</h2>
+            </div>
+        </div>
+        <div class="col-12 mb-2">
+            <p>
+                <a class="btn btnfiltro w-100" data-toggle="collapse" href="#collapseExample" role="button"
+                    aria-expanded="true" aria-controls="collapseExample">
+                    RÁPIDA
+                </a>
+            </p>
+            <div class="collapsed" id="collapseExample">
+                <div class="card card-body border border-dark">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="form-group">
+                                <label class="font-weight-bold" for="codsnip">Código Snip</label>
+                                <input class="form-control" type="text" id="codsnip" placeholder="Ingrese algún código">
+                            </div>
+                            <div class="form-group">
+                                <label class="font-weight-bold" for="nombreentidad">Nombre o Sigla de Entidad</label>
+                                <input class="form-control" type="text" id="nombreentidad"
+                                    placeholder="Ingrese el nombre o sigla de alguna entidad">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="form-group">
+                                <label class="font-weight-bold" for="codcontrado">Cod. contrato</label>
+                                <input class="form-control" type="text" id="codcontrado"
+                                    placeholder="Ingrese algún código de contrato">
+                            </div>
+                            <div class="form-group">
+                                <label class="font-weight-bold" for="descripobjeto">Descripción del Objeto</label>
+                                <input class="form-control" type="text" id="descripobjeto"
+                                    placeholder="Ingrese la descipción de algún objeto">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="form-group">
+                                <label class="font-weight-bold" for="codinversion">Cod. Único inversión </label>
+                                <input class="form-control" type="text" id="codinversion"
+                                    placeholder="Ingrese algún código único de inversión ">
+                            </div>
+                            <div class="form-group">
+                                <label class="font-weight-bold" for="identificonvoca">Identificación de
+                                    Convocatoria</label>
+                                <input class="form-control" type="text" id="identificonvoca"
+                                    placeholder="Ingrese algún identificador de convocatoria">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-12 mb-2">
+            <p>
+                <a class="btn btnfiltro w-100" data-toggle="collapse" href="#collapseExample2" role="button"
+                    aria-expanded="false" aria-controls="collapseExample2">
+                    AVANZADA
+                </a>
+            </p>
+            <div class="collapse" id="collapseExample2">
+                <div class="card card-body border-dark">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="form-group">
+                                <label class="font-weight-bold" for="codsnip">Objeto de contratación</label>
+                                <select id="demo3s" data-max="5" multiple="multiple" style="" class="demo3">
+                                    <option value="Volvo">OP1</option>
+                                    <option value="Opel">OP2</option>
+                                    <option value="Audi">OP3</option>
+                                    <option value="Dodge">OP4</option>
+                                    <option value="Toyota">OP5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-weight-bold" for="nombreentidad">F2</label>
+                                <select id="demo3s" data-max="5" multiple="multiple" style="" class="demo3">
+                                    <option value="Volvo">OP1</option>
+                                    <option value="Opel">OP2</option>
+                                    <option value="Audi">OP3</option>
+                                    <option value="Dodge">OP4</option>
+                                    <option value="Toyota">OP5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-weight-bold" for="nombreentidad">F2</label>
+                                <select id="demo3s" data-max="5" multiple="multiple" style="" class="demo3">
+                                    <option value="Volvo">OP1</option>
+                                    <option value="Opel">OP2</option>
+                                    <option value="Audi">OP3</option>
+                                    <option value="Dodge">OP4</option>
+                                    <option value="Toyota">OP5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="form-group">
+                                <label class="font-weight-bold" for="codsnip">Objeto de contratación</label>
+                                <select id="demo3s" data-max="5" multiple="multiple" style="" class="demo3">
+                                    <option value="Volvo">OP1</option>
+                                    <option value="Opel">OP2</option>
+                                    <option value="Audi">OP3</option>
+                                    <option value="Dodge">OP4</option>
+                                    <option value="Toyota">OP5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-weight-bold" for="nombreentidad">F2</label>
+                                <select id="demo3s" data-max="5" multiple="multiple" style="" class="demo3">
+                                    <option value="Volvo">OP1</option>
+                                    <option value="Opel">OP2</option>
+                                    <option value="Audi">OP3</option>
+                                    <option value="Dodge">OP4</option>
+                                    <option value="Toyota">OP5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-weight-bold" for="nombreentidad">F2</label>
+                                <select id="demo3s" data-max="5" multiple="multiple" style="" class="demo3">
+                                    <option value="Volvo">OP1</option>
+                                    <option value="Opel">OP2</option>
+                                    <option value="Audi">OP3</option>
+                                    <option value="Dodge">OP4</option>
+                                    <option value="Toyota">OP5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="form-group">
+                                <label class="font-weight-bold" for="codsnip">Objeto de contratación</label>
+                                <select id="demo3s" data-max="5" multiple="multiple" style="" class="demo3">
+                                    <option value="Volvo">OP1</option>
+                                    <option value="Opel">OP2</option>
+                                    <option value="Audi">OP3</option>
+                                    <option value="Dodge">OP4</option>
+                                    <option value="Toyota">OP5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-weight-bold" for="nombreentidad">F2</label>
+                                <select id="demo3s" data-max="5" multiple="multiple" style="" class="demo3">
+                                    <option value="Volvo">OP1</option>
+                                    <option value="Opel">OP2</option>
+                                    <option value="Audi">OP3</option>
+                                    <option value="Dodge">OP4</option>
+                                    <option value="Toyota">OP5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="font-weight-bold" for="nombreentidad">F2</label>
+                                <select id="demo3s" data-max="5" multiple="multiple" style="" class="demo3">
+                                    <option value="Volvo">OP1</option>
+                                    <option value="Opel">OP2</option>
+                                    <option value="Audi">OP3</option>
+                                    <option value="Dodge">OP4</option>
+                                    <option value="Toyota">OP5</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 mb-2">
+            <div class="row w-100 d-flex justify-content-center">
+                <div class="col-sm-6 border  border-dark btnbuscar text-center rounded">
+                    <h3>Buscar</h3>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+{% block contenidosecundario %}
+<div class="col-md-12">
+    <div class="row ">
+        <div class="col-md-4 d-flex justify-content-around align-items-center">
+            Resultados de la búsqueda
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+            <button type="button" class="btn btn-secondary btn-lg">Descargar</button>
+        </div>
+        <div class="col-md-4 d-flex justify-content-around align-items-center">
+            Items por página <input class="" type="text" id="objetospagina" size="2" class="text-center"
+                style=" width: 4ch;"> 1 de 2
+            <a class="btn " href="#" aria-label="Previous">
+                <h3>&laquo;</h3>
+            </a>
+            <a class="btn" href="#" aria-label="Next">
+                <h3>&raquo;</h3>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="col-12 mt-2">
+    <div class="card card-body resultado">  
+        <h5 class="text-center">Título de proyecto</h5>
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="form-group text-center">                    
+                    <label class="font-weight-bold" for="codsnip">Entidad Contratante</label>                    
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="nombreentidad">Nomenclatura del Proceso</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="codcontrado">Fecha de Suscripción</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="descripobjeto">Avance</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="codcontrado">Contratista</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="descripobjeto">Número del contrato</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="codcontrado">Fecha fin</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>                
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="codinversion">Monto</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="identificonvoca">Objeto</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="identificonvoca">Fecha inicio</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>                
+            </div>
+            <div class="col-12 text-center">
+                <button type="button" class="btn btn-secondary btn-lg">Ver detalle</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="col-12 mt-2">
+    <div class="card card-body resultado">  
+        <h5 class="text-center">Título de proyecto</h5>
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="form-group text-center">                    
+                    <label class="font-weight-bold" for="codsnip">Entidad Contratante</label>                    
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="nombreentidad">Nomenclatura del Proceso</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="codcontrado">Fecha de Suscripción</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="descripobjeto">Avance</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="codcontrado">Contratista</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="descripobjeto">Número del contrato</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="codcontrado">Fecha fin</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>                
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="codinversion">Monto</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="identificonvoca">Objeto</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="identificonvoca">Fecha inicio</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>                
+            </div>
+            <div class="col-12 text-center">
+                <button type="button" class="btn btn-secondary btn-lg">Ver detalle</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="col-12 mt-2">
+    <div class="card card-body resultado">  
+        <h5 class="text-center">Título de proyecto</h5>
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="form-group text-center">                    
+                    <label class="font-weight-bold" for="codsnip">Entidad Contratante</label>                    
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="nombreentidad">Nomenclatura del Proceso</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="codcontrado">Fecha de Suscripción</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="descripobjeto">Avance</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="codcontrado">Contratista</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="descripobjeto">Número del contrato</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="codcontrado">Fecha fin</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>                
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="codinversion">Monto</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="identificonvoca">Objeto</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>
+                <div class="form-group text-center">
+                    <label class="font-weight-bold" for="identificonvoca">Fecha inicio</label>
+                    <p class="mx-2">Entidad Contratante</p>
+                </div>                
+            </div>
+            <div class="col-12 text-center">
+                <button type="button" class="btn btn-secondary btn-lg">Ver detalle</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
+{% block scripts %}
+
+<script>
+    $('#collapseExample').collapse()
+    $('#codsnip').val();
+    $('#nombreentidad').val();
+    $('#codcontrado').val();
+    $('#descripobjeto').val();
+    $('#codinversion').val();
+    $('#identificonvoca').val();
+    //https://www.cssscript.com/single-multi-select-vanilla/
+    /*
+    codsnip
+    nombreentidad
+    codcontrado
+    descripobjeto
+    codinversion
+    identificonvoca
+    */
+
+</script>
+<script src="/static/multiselect-easy/easySelect.js"></script>
+<script>
+$(".demo3").easySelect({
+         buttons: true, // 
+         search: true,
+         placeholder: 'Seleccione opción',
+         placeholderColor: 'green',
+         selectColor: '#524781',
+         itemTitle: 'Opciones',
+         showEachItem: true,
+         width: '80%',
+         dropdownMaxHeight: '450px',
+     })
+</script>
+{% endblock %}

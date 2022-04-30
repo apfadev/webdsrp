@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Created by Apfata Nelson">
+    <meta name="generator" content="Apfata">
+    <title>Proyecto | {{titulo}}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Hind', sans-serif;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <style>
+        .my-image {
+            filter: grayscale(1);
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+
+        }
+
+        .titulo-proy {
+            background-color: rgb(133, 12, 12);
+            color: white;
+        }
+
+        .texto-rojoraro {
+            color: rgb(133, 12, 12);
+        }
+
+        .titulotexto {
+            color: white;
+        }
+
+        /*style for button on hover and active*/
+        .botoncontacot:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+            /* Green */
+        }
+
+        .botoncontacot {
+            background-color: black;
+            color: white;
+            border: 2px solid black;
+            /* Green */
+        }
+        .btnfiltro:hover {
+            background-color: white;
+            color: black;
+            border: 3px solid cadetblue;
+            /* Green */
+        }
+
+        .btnfiltro {
+            background-color: gray;
+            color: white;
+            border: 3px solid cadetblue;
+            /* Green */
+        }
+        .secciones {
+            color: #000;
+        }
+        .imgbtn{
+            width: 40px;
+            height: 40px;
+        }
+        .imgbtn2{
+            width: 60px;
+            height: 60px;
+        }
+        .contenidoprincipal{
+            min-height: 40px;
+        }
+        .btnbuscar:hover {
+            background-color: rgb(133, 12, 12);
+            color: white;
+            border: 2px rgb(133, 12, 12) ;
+            /* Green */
+        }
+        .btnbuscar {
+            border: 5px rgb(133, 12, 12) ;            
+            background-color: white;
+            color: rgb(133, 12, 12);
+            cursor: pointer;
+            /* Green */
+        }
+
+        
+        
+    </style>
+    {% block styles %}
+    {% endblock %}
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="static/proyecto.css" rel="stylesheet">
+</head>
+
+<body >
+
+    <div class="container">
+        <header class="blog-header py-3">
+            <div class="row flex-wrap justify-content-between align-items-center titulo-proy">
+                <div class="col-12 col-sm-12 col-md-8 text-start align-items-center ">
+                    <div class="d-flex align-items-center p-2  text-white-50 bg-purple rounded box-shadow">
+                        <img class="mr-3" src="https://1000marcas.net/wp-content/uploads/2021/05/Google-Photos-logo.png"
+                            alt="" width="48" height="48">
+                        <div class="lh-100">
+                            <h6 class="mb-0 text-white lh-100"> <a href="/" class="titulotexto">Título del proyecto</a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-12 col-sm-12 col-md-4 d-flex justify-content-end align-items-center">
+                    <a class="btn botoncontacot mr-1" href="/nosotros">Nosotros</a>
+                    <a class="btn botoncontacot" href="/contacto">Contacto</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="nav-scroller py-1 mb-2">
+            <nav class="nav d-flex justify-content-around border-top border-bottom">
+                <a class="p-2 text-muted" href="/buscador">
+                    <h3 class=" {{buscador}}">BUSCADOR</h3>
+                </a>
+                <a class="p-2 text-muted " href="/dashboard">
+                    <h3 class="{{dashboard}}">DASHBOARD</h3>
+                </a>
+                <a class="p-2 text-muted " href="/proveedores">
+                    <h3 class="{{proveedores}}">PROVEEDORES</h3>
+                </a>
+            </nav>
+        </div>
+
+        <div class="p-4 p-md-12  rounded bg-light">
+            <div class="col-md-12 px-0 ">
+                {% block contenidoprincipal %}
+                {% endblock %}
+                
+            </div>
+        </div>
+
+
+    </div>
+
+    <main role="main" class="container">
+        <div class="row">
+            {% block contenidosecundario %}
+            {% endblock %}
+
+            
+
+
+        </div><!-- /.row -->
+
+    </main><!-- /.container -->
+
+    <footer class="blog-footer titulo-proy">
+       
+    </footer>
+    <footer class="pt-2 my-md-2 pt-md-2 border-top">
+        <div class="container">
+            <div class="row">          
+                <div class="col-12 col-md-12 d-flex justify-content-center">
+                  <p>Realizado por
+                      <a href="#" class="C">Apfata Nelson</a>.
+                      
+                  </p>
+                </div>
+             
+              </div>
+        </div>
+       
+      </footer>
+
+
+
+</body>
+   <!-- jQuery -->
+   <script src="{{url_for('static',filename='/plugins/jquery/jquery.min.js')}}"></script>    
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <!-- Bootstrap 4 -->
+   <script src="{{url_for('static',filename='/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>    
+   <!-- AdminLTE App -->
+   <script src="{{url_for('static',filename='/dist/js/adminlte.min.js')}}"></script>    
+   <!-- include 'smaars/loader.html' -->
+   {% block scripts %}
+   {% endblock %}
+
+</html>
