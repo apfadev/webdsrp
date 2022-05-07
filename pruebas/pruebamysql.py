@@ -7,7 +7,7 @@ def get_prueba():
                         port = '3306',
                         user = 'admin',
                         database = 'dsrp',
-                        password = 't8P2uEeRHsiDnCEDaaRE')
+                        password = '')
     #execute query mysql
     cursor = con.cursor()
     cursor.execute("select * from dsrp.tabla_pip limit 1")
