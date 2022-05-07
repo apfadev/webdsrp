@@ -3,7 +3,7 @@ import mysql.connector as mysql
 
                     
 def get_prueba():
-    con = mysql.connect(host = 'db-dsrp-dev.cdykihpovon2.us-east-1.rds.amazonaws.com',
+    con = mysql.connect(host = '',
                         port = '3306',
                         user = 'admin',
                         database = 'dsrp',
