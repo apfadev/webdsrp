@@ -113,3 +113,107 @@ h1, h2, h3, h4, h5, h6 {
   color: black;
   border: 2px black;
 }
+body {
+    font-family: 'Hind', sans-serif;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.my-image {
+    filter: grayscale(1);
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+
+}
+
+.titulo-proy {
+    background-color: rgb(133, 12, 12);
+    color: white;
+}
+
+.texto-rojoraro {
+    color: rgb(133, 12, 12);
+}
+
+.titulotexto {
+    color: white;
+}
+
+/*style for button on hover and active*/
+.botoncontacot:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    /* Green */
+}
+
+.botoncontacot {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    /* Green */
+}
+.btnfiltro:hover {
+    background-color: white;
+    color: black;
+    border: 3px solid gray;
+    /* Green */
+}
+
+.btnfiltro {
+    background-color: gray;
+    color: white;
+    border: 3px solid gray;
+    /* Green */
+}
+.secciones {
+    color: #000;
+}
+.imgbtn{
+    width: 40px;
+    height: 40px;
+}
+.imgbtn2{
+    width: 60px;
+    height: 60px;
+}
+.contenidoprincipal{
+    min-height: 40px;
+}
+.btnbuscar {
+    background-color: rgb(133, 12, 12);
+    color: white;
+    border: 2px rgb(133, 12, 12) ;
+    /* Green */
+}
+.btnbuscar:hover {
+    border: 5px rgb(133, 12, 12) ;            
+    background-color: white;
+    color: rgb(133, 12, 12);
+    cursor: pointer;
+    /* Green */
+}
+
+.linkhome {
+  color: white;
+}
+.linkhome:hover {
+  color: rgb(240, 240, 240);
+  cursor: pointer;
+  /* Green */
+}
+

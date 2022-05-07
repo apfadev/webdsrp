@@ -14,106 +14,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@500&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Hind', sans-serif;
-        }
-
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
-    <style>
-        .my-image {
-            filter: grayscale(1);
-            width: 40px;
-            height: 40px;
-            object-fit: contain;
-
-        }
-
-        .titulo-proy {
-            background-color: rgb(133, 12, 12);
-            color: white;
-        }
-
-        .texto-rojoraro {
-            color: rgb(133, 12, 12);
-        }
-
-        .titulotexto {
-            color: white;
-        }
-
-        /*style for button on hover and active*/
-        .botoncontacot:hover {
-            background-color: white;
-            color: black;
-            border: 2px solid black;
-            /* Green */
-        }
-
-        .botoncontacot {
-            background-color: black;
-            color: white;
-            border: 2px solid black;
-            /* Green */
-        }
-        .btnfiltro:hover {
-            background-color: white;
-            color: black;
-            border: 3px solid gray;
-            /* Green */
-        }
-
-        .btnfiltro {
-            background-color: gray;
-            color: white;
-            border: 3px solid gray;
-            /* Green */
-        }
-        .secciones {
-            color: #000;
-        }
-        .imgbtn{
-            width: 40px;
-            height: 40px;
-        }
-        .imgbtn2{
-            width: 60px;
-            height: 60px;
-        }
-        .contenidoprincipal{
-            min-height: 40px;
-        }
-        .btnbuscar {
-            background-color: rgb(133, 12, 12);
-            color: white;
-            border: 2px rgb(133, 12, 12) ;
-            /* Green */
-        }
-        .btnbuscar:hover {
-            border: 5px rgb(133, 12, 12) ;            
-            background-color: white;
-            color: rgb(133, 12, 12);
-            cursor: pointer;
-            /* Green */
-        }
-
-        
-        
-    </style>
+    <link rel="icon" href="{{url_for('static', filename = '/imgs/logoproyecto2.png' )}}">
+ 
     {% block styles %}
     {% endblock %}
 
@@ -130,10 +32,10 @@
             <div class="row flex-wrap justify-content-between align-items-center titulo-proy">
                 <div class="col-12 col-sm-12 col-md-8 text-start align-items-center ">
                     <div class="d-flex align-items-center p-2  text-white-50 bg-purple rounded box-shadow">
-                        <img class="mr-3" src="https://1000marcas.net/wp-content/uploads/2021/05/Google-Photos-logo.png"
-                            alt="" width="48" height="48">
+
+                        <img class="mr-3" src="{{url_for('static', filename = '/imgs/logoproyecto2.png' )}}" alt="" width="48" height="48">
                         <div class="lh-100">
-                            <h6 class="mb-0 text-white lh-100"> <a href="/" class="titulotexto">Título del proyecto</a>
+                            <h6 class="mb-0  lh-100 linkhome"> <a href="/" class="linkhome">Tech UREP</a>
                             </h6>
                         </div>
                     </div>

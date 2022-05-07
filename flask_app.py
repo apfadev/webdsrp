@@ -1,7 +1,6 @@
 # make  quick start flask app
 from turtle import title
 from flask import Flask,render_template
-import pruebas.pruebamysql as pruebamysql
 app = Flask(__name__)
 @app.route('/')
 def principal():
