@@ -29,35 +29,26 @@
                                 <label class="font-weight-bold" for="codsnip">Código SNIP</label>
                                 <input class="form-control" type="text" id="codsnip" placeholder="Ingrese algún código">
                             </div>
-                            <div class="form-group">
-                                <label class="font-weight-bold" for="nombreentidad">Nombre o Sigla de Entidad</label>
-                                <input class="form-control" type="text" id="nombreentidad"
-                                    placeholder="Ingrese el nombre o sigla de alguna entidad">
-                            </div>
+
                         </div>
                         <div class="col-md-6 col-lg-4">
                             <div class="form-group">
-                                <label class="font-weight-bold" for="codcontrado">Cod. contrato</label>
+                                <label class="font-weight-bold" for="codcontrado">Código de Contrato</label>
                                 <input class="form-control" type="text" id="codcontrado"
                                     placeholder="Ingrese algún código de contrato">
                             </div>
                             <div class="form-group">
-                                <label class="font-weight-bold" for="descripobjeto">Descripción del Objeto</label>
-                                <input class="form-control" type="text" id="descripobjeto"
+                                <label class="font-weight-bold" for="codproyectoinvpublica">Código de Proyecto de
+                                    Inversión Pública</label>
+                                <input class="form-control" type="text" id="codproyectoinvpublica"
                                     placeholder="Ingrese la descipción de algún objeto">
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-4">
                             <div class="form-group">
-                                <label class="font-weight-bold" for="codinversion">Cod. Único inversión </label>
-                                <input class="form-control" type="text" id="codinversion"
+                                <label class="font-weight-bold" for="codconvocatoria">Código de convocatoria </label>
+                                <input class="form-control" type="text" id="codconvocatoria"
                                     placeholder="Ingrese algún código único de inversión ">
-                            </div>
-                            <div class="form-group">
-                                <label class="font-weight-bold" for="identificonvoca">Identificación de
-                                    Convocatoria</label>
-                                <input class="form-control" type="text" id="identificonvoca"
-                                    placeholder="Ingrese algún identificador de convocatoria">
                             </div>
                         </div>
 
@@ -76,100 +67,88 @@
             <div class="collapse" id="collapseExample2">
                 <div class="card card-body border-dark">
                     <div class="row">
+                        <div class="col">
+                            <label class="font-weight-bold" for="codsnip">Busqueda avanzada de Contratos</label>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-md-6 col-lg-4">
                             <div class="form-group">
-                                <label class="font-weight-bold" for="codsnip">Objeto de contratación</label>
-                                <select id="demo3s" data-max="5" multiple="multiple" style="" class="demo3">
-                                    <option value="Volvo">OP1</option>
-                                    <option value="Opel">OP2</option>
-                                    <option value="Audi">OP3</option>
-                                    <option value="Dodge">OP4</option>
-                                    <option value="Toyota">OP5</option>
+                                <label class="font-weight-bold" for="codsnip">Sector:</label>
+                                <select id="secotoresopcion" data-max="5" multiple="multiple" class="demo3">
+                                    {{opcionessectoreshtml|safe}}
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label class="font-weight-bold" for="nombreentidad">F2</label>
-                                <select id="demo3s" data-max="5" multiple="multiple" style="" class="demo3">
-                                    <option value="Volvo">OP1</option>
-                                    <option value="Opel">OP2</option>
-                                    <option value="Audi">OP3</option>
-                                    <option value="Dodge">OP4</option>
-                                    <option value="Toyota">OP5</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="font-weight-bold" for="nombreentidad">F2</label>
-                                <select id="demo3s" data-max="5" multiple="multiple" style="" class="demo3">
-                                    <option value="Volvo">OP1</option>
-                                    <option value="Opel">OP2</option>
-                                    <option value="Audi">OP3</option>
-                                    <option value="Dodge">OP4</option>
-                                    <option value="Toyota">OP5</option>
-                                </select>
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="font-weight-bold">Rango de Fecha:</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label class="font-weight-bold" for="fechaInicio">Inicio</label>
+                                        <div class="input-group mb-3">
+
+                                            <input type="date" id="fechaInicio" class="form-control"
+                                                placeholder="Username" aria-label="Inicio"
+                                                aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <label class="font-weight-bold" for="fechaFin">Fin</label>
+                                        <div class="input-group mb-3">
+
+                                            <input type="date" id="fechaFin" class="form-control" placeholder="Username"
+                                                aria-label="Fin" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-4">
                             <div class="form-group">
-                                <label class="font-weight-bold" for="codsnip">Objeto de contratación</label>
-                                <select id="demo3s" data-max="5" multiple="multiple" style="" class="demo3">
-                                    <option value="Volvo">OP1</option>
-                                    <option value="Opel">OP2</option>
-                                    <option value="Audi">OP3</option>
-                                    <option value="Dodge">OP4</option>
-                                    <option value="Toyota">OP5</option>
-                                </select>
+                                <label class="font-weight-bold" for="codsnip">Entidad contratante:</label>
+                                <input type="text" id="entidadcontratante" class="form-control" placeholder="Entidad contratista-Proveedor"
+                                                aria-label="Entidad contratante" aria-describedby="basic-addon1">
                             </div>
                             <div class="form-group">
-                                <label class="font-weight-bold" for="nombreentidad">F2</label>
-                                <select id="demo3s" data-max="5" multiple="multiple" style="" class="demo3">
-                                    <option value="Volvo">OP1</option>
-                                    <option value="Opel">OP2</option>
-                                    <option value="Audi">OP3</option>
-                                    <option value="Dodge">OP4</option>
-                                    <option value="Toyota">OP5</option>
-                                </select>
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="font-weight-bold" for="nombreentidad">Rango de Monto del
+                                            contrato:</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="font-weight-bold" for="monotMin">Mínimo</label>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">S/</span>
+                                            </div>
+                                            <input type="number" id="monotMin" class="form-control" placeholder="Mínimo"
+                                                aria-label="Mínimo" aria-describedby="basic-addon1" min="0" max="1000000">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <label class="font-weight-bold" for="monotMax">Máximo</label>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">S/</span>
+                                            </div>
+                                            <input type="number" id="monotMax" class="form-control" placeholder="Máximo"
+                                                aria-label="Máximo" aria-describedby="basic-addon1" min="0" max="1000000">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label class="font-weight-bold" for="nombreentidad">F2</label>
-                                <select id="demo3s" data-max="5" multiple="multiple" style="" class="demo3">
-                                    <option value="Volvo">OP1</option>
-                                    <option value="Opel">OP2</option>
-                                    <option value="Audi">OP3</option>
-                                    <option value="Dodge">OP4</option>
-                                    <option value="Toyota">OP5</option>
-                                </select>
-                            </div>
+
                         </div>
                         <div class="col-md-6 col-lg-4">
                             <div class="form-group">
-                                <label class="font-weight-bold" for="codsnip">Objeto de contratación</label>
-                                <select id="demo3s" data-max="5" multiple="multiple" style="" class="demo3">
-                                    <option value="Volvo">OP1</option>
-                                    <option value="Opel">OP2</option>
-                                    <option value="Audi">OP3</option>
-                                    <option value="Dodge">OP4</option>
-                                    <option value="Toyota">OP5</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="font-weight-bold" for="nombreentidad">F2</label>
-                                <select id="demo3s" data-max="5" multiple="multiple" style="" class="demo3">
-                                    <option value="Volvo">OP1</option>
-                                    <option value="Opel">OP2</option>
-                                    <option value="Audi">OP3</option>
-                                    <option value="Dodge">OP4</option>
-                                    <option value="Toyota">OP5</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="font-weight-bold" for="nombreentidad">F2</label>
-                                <select id="demo3s" data-max="5" multiple="multiple" style="" class="demo3">
-                                    <option value="Volvo">OP1</option>
-                                    <option value="Opel">OP2</option>
-                                    <option value="Audi">OP3</option>
-                                    <option value="Dodge">OP4</option>
-                                    <option value="Toyota">OP5</option>
-                                </select>
+                                <label class="font-weight-bold" for="codsnip">Entidad contratista-Proveedor:</label>
+                                <input type="text" id="entidadcontratista" class="form-control" placeholder="Entidad contratista-Proveedor"
+                                                aria-label="Máximo" aria-describedby="basic-addon1">
                             </div>
                         </div>
 
@@ -191,203 +170,107 @@
 </div>
 {% endblock %}
 {% block contenidosecundario %}
-<div class="col-md-12">
-    <div class="row ">
-        <div class="col-md-4 d-flex justify-content-around align-items-center">
-            Resultados de la búsqueda
-        </div>
-        <div class="col-md-4 d-flex justify-content-center align-items-center">
-            <button type="button" class="btn btn-secondary btn-lg">Descargar</button>
-        </div>
-        <div class="col-md-4 d-flex justify-content-around align-items-center">
-            Items por página <input class="" type="text" id="objetospagina" size="2" class="text-center"
-                style=" width: 4ch;"> 1 de 2
-            <a class="btn " href="#" aria-label="Previous">
-                <h3>&laquo;</h3>
-            </a>
-            <a class="btn" href="#" aria-label="Next">
-                <h3>&raquo;</h3>
-            </a>
+<div class="col-12 mb-4">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row ">
+                <div class="col-md-4 d-flex justify-content-around align-items-center">
+                    <h3>
+                        Resultados de la búsqueda
+                    </h3>                    
+                </div>
+                <div class="d-none col-md-4 ">
+                    <button type="button" class="btn btn-secondary btn-lg">Descargar</button>
+                </div>
+                <div class="d-none col-md-4 ">
+                    Items por página <input class="" type="text" id="objetospagina" size="2" class="text-center"
+                        style=" width: 4ch;"> 1 de 2
+                    <a class="btn " href="#" aria-label="Previous">
+                        <h3>&laquo;</h3>
+                    </a>
+                    <a class="btn" href="#" aria-label="Next">
+                        <h3>&raquo;</h3>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-
-<div class="col-12 mt-2">
-    <div class="card card-body resultado">  
-        <h5 class="text-center">Título de proyecto</h5>
-        <div class="row">
-            <div class="col-md-6 col-lg-4">
-                <div class="form-group text-center">                    
-                    <label class="font-weight-bold" for="codsnip">Entidad Contratante</label>                    
-                    <p class="mx-2">Entidad Contratante</p>
+    <div class="row">
+        <div class="col-12 mt-2">
+            <div class="card">
+                <h5 class="card-header text-center">Título de proyecto</h5>
+                <div class="card-body resultado">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group ">
+                                <label class="font-weight-bold " >
+                                    <h2>Tipo de Tarjeta: Contrato</h2>                            
+                                </label>                        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="form-group">
+                                <label class="font-weight-bold" >Código de contrato</label>
+                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" disabled>
+                            </div>
+                            <div class="form-group ">
+                                <label class="font-weight-bold" >Fecha de inicio</label>
+                                <input type="text" class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" disabled>
+                            </div>
+                            <div class="form-group ">
+                                <label class="font-weight-bold" >Sector</label>
+                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" disabled>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="form-group ">
+                                <label class="font-weight-bold" >Entidad Pública Contratante</label>
+                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" disabled>
+                            </div>
+                            <div class="form-group ">
+                                <label class="font-weight-bold" >Fecha Fin</label>
+                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" disabled>
+                            </div>
+                            <div class="form-group ">
+                                <label class="font-weight-bold">Número de contrato</label>
+                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" disabled>
+                            </div>
+        
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="form-group ">
+                                <label class="font-weight-bold" >Entidad Contratista-Proveedor</label>
+                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" disabled>
+                            </div>
+                            <div class="form-group ">
+                                <label class="font-weight-bold" >Monto Contratado</label>
+                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" disabled>
+                            </div>
+                            <div class="form-group ">
+                                <label class="font-weight-bold"  >Fecha de Suscripción de Contrato</label>
+                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" disabled>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center d-none">
+                            <button type="button" class="btn btn-secondary btn-lg">Ver detalle</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="nombreentidad">Nomenclatura del Proceso</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="codcontrado">Fecha de Suscripción</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="descripobjeto">Avance</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="codcontrado">Contratista</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="descripobjeto">Número del contrato</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="codcontrado">Fecha fin</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>                
-
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="codinversion">Monto</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="identificonvoca">Objeto</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="identificonvoca">Fecha inicio</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>                
-            </div>
-            <div class="col-12 text-center">
-                <button type="button" class="btn btn-secondary btn-lg">Ver detalle</button>
-            </div>
-        </div>
-
-    </div>
-</div>
-<div class="col-12 mt-2">
-    <div class="card card-body resultado">  
-        <h5 class="text-center">Título de proyecto</h5>
-        <div class="row">
-            <div class="col-md-6 col-lg-4">
-                <div class="form-group text-center">                    
-                    <label class="font-weight-bold" for="codsnip">Entidad Contratante</label>                    
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="nombreentidad">Nomenclatura del Proceso</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="codcontrado">Fecha de Suscripción</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="descripobjeto">Avance</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="codcontrado">Contratista</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="descripobjeto">Número del contrato</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="codcontrado">Fecha fin</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>                
-
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="codinversion">Monto</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="identificonvoca">Objeto</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="identificonvoca">Fecha inicio</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>                
-            </div>
-            <div class="col-12 text-center">
-                <button type="button" class="btn btn-secondary btn-lg">Ver detalle</button>
+        
             </div>
         </div>
 
     </div>
 </div>
-<div class="col-12 mt-2">
-    <div class="card card-body resultado">  
-        <h5 class="text-center">Título de proyecto</h5>
-        <div class="row">
-            <div class="col-md-6 col-lg-4">
-                <div class="form-group text-center">                    
-                    <label class="font-weight-bold" for="codsnip">Entidad Contratante</label>                    
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="nombreentidad">Nomenclatura del Proceso</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="codcontrado">Fecha de Suscripción</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="descripobjeto">Avance</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="codcontrado">Contratista</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="descripobjeto">Número del contrato</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="codcontrado">Fecha fin</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>                
 
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="codinversion">Monto</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="identificonvoca">Objeto</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>
-                <div class="form-group text-center">
-                    <label class="font-weight-bold" for="identificonvoca">Fecha inicio</label>
-                    <p class="mx-2">Entidad Contratante</p>
-                </div>                
-            </div>
-            <div class="col-12 text-center">
-                <button type="button" class="btn btn-secondary btn-lg">Ver detalle</button>
-            </div>
-        </div>
 
-    </div>
-</div>
+
+
 
 {% endblock %}
+
 {% block scripts %}
 
 <script>
@@ -411,16 +294,46 @@
 </script>
 <script src="/static/multiselect-easy/easySelect.js"></script>
 <script>
-$(".demo3").easySelect({
-         buttons: true, // 
-         search: true,
-         placeholder: 'Seleccione opción',
-         placeholderColor: 'green',
-         selectColor: '#524781',
-         itemTitle: 'Opciones',
-         showEachItem: true,
-         width: '80%',
-         dropdownMaxHeight: '450px',
-     })
+    $(".demo3").easySelect({
+        buttons: true, // 
+        search: true,
+        placeholder: 'Seleccione opción',
+        placeholderColor: 'green',
+        selectColor: '#524781',
+        itemTitle: 'Opciones',
+        showEachItem: true,
+        width: '80%',
+        dropdownMaxHeight: '450px',
+    });
+    codsnip
+    //#Búsqueda básica
+$.ajax({                
+        
+        type : "POST",
+        url  : "http://127.0.0.1:4000/buscaproyecto",
+        contentType: 'application/json; charset=utf-8',
+        dataType: "json",
+        data: JSON.stringify({
+                CodPip: $("#codproyectoinvpublica").val(),
+                CodSnip: $("#codsnip").val(),
+                CodConv: $("#codconvocatoria").val(),
+                NomCta: $("#entidadcontratista").val(),
+                NomCte: $("#entidadcontratante").val() ,
+
+                CodCto: $("#codcontrado").val(),
+                MonTotCtoMin: $("#monotMin").val(),
+                MonTotCtoMax: $("#monotMax").val(),
+                FecIniCto: $("#fechaInicio").val(),
+                FecFinCto: $("#fechaFin").val(),
+                NomSec: $("#secotoresopcion").val(),  
+                }),     
+    }).done(function(response){        
+        let s_response  = response
+        console.log(s_response)
+    }).fail(function(error){       
+        alert('Error al buscar');        
+    })
+
+
 </script>
 {% endblock %}

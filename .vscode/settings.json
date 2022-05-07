@@ -6,10 +6,10 @@
   "-i"
 ],
 "workbench.colorCustomizations": {
-  "titleBar.activeBackground": "#850C00", // Change this color!
-  "activityBar.background": "#850C00",
-  "minimap.background": "#850C00",
-  "panel.background":"#850C00",
+  "titleBar.activeBackground": "#000", // Change this color!
+  "activityBar.background": "#000",
+  "minimap.background": "#000",
+  "panel.background":"#000",
 
 },
 "window.titleBarStyle": "custom"

@@ -1,7 +1,9 @@
 # make  quick start flask app
 from turtle import title
-from flask import Flask,render_template
+from flask import Flask,render_template,request,json
+import requests
 app = Flask(__name__)
+URL_FINAL = 'http://127.0.0.1:4000'
 @app.route('/')
 def principal():
     args={
@@ -10,9 +12,16 @@ def principal():
     return render_template('indexblog.html',**args)
 @app.route('/buscador')    
 def buscador():
+    #Opciones para sectores
+    r = requests.get(URL_FINAL+'/sector')
+    sectores = r.json()
+    opt = [valor['NomSec']  for valor in sectores]
+    opcionessectoreshtml =" ".join([ "<option value='" + x + "'>Label " + x + "</option>"  for x in opt])
+    #Opciones para subsectores
     args={
         'titulo':'Buscador',
-        'buscador':'secciones'
+        'buscador':'secciones',
+        "opcionessectoreshtml":opcionessectoreshtml
     }
     return render_template('buscador.html',**args)
 @app.route('/dashboard')    
@@ -40,7 +49,8 @@ def contacto():
     args={
         'titulo':'Contacto',
     }
-    return render_template('contacto.html',**args)                  
+    return render_template('contacto.html',**args)  
+            
 if __name__ == '__main__':
     app.run(debug=True) 
 
