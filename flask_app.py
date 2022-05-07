@@ -25,6 +25,7 @@ def buscador():
     except Exception as error:
         print(error)
         opcionessectoreshtml =""
+    opcionessectoreshtml =""
     #Opciones para subsectores
     args={
         'titulo':'Buscador',

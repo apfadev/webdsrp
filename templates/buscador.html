@@ -235,21 +235,10 @@
 </script>
 <script src="/static/multiselect-easy/easySelect.js"></script>
 <script>
-    /*
-    $(".demo3").easySelect({
-        buttons: true, // 
-        search: true,
-        placeholder: 'Seleccione opción',
-        placeholderColor: 'green',
-        selectColor: '#524781',
-        itemTitle: 'Opciones',
-        showEachItem: true,
-        width: '80%',
-        dropdownMaxHeight: '450px',
-    });*/
-    
-    //#Búsqueda básica
+    LINK ='https://apidscpruebassegundo.herokuapp.com'
 
+    //#Búsqueda básica
+    opciones();
     buscar();
     $('#btnbuscar').click(function(){
         k={
@@ -265,14 +254,15 @@
                 FechaFinContrato: $("#fechaFin").val(),
                 NombreSector: $("#secotoresopcion").val(),
                 NumeroResultado:$("#cantidad").val(),
-                    }        
+                    }  
+        console.log('OPCIONES: ',k)      
         buscar()
     });
     
        
   
     function buscar() {
-        LINK ='https://apidscpruebassegundo.herokuapp.com'
+        
         spinner_html = `
 
         <div class="spinner-border" role="status">
@@ -446,7 +436,7 @@
             elementos_contrato = ''
             $.each(CONTRATOS, function(k, v) {
                 //console.log(CONTRATOS)
-                console.log(v)
+                
                 CodigoContrato=v['CodigoContrato']
                 EntidadPublica=v['EntidadPublica']
                 FechaFin=v['FechaFin']
@@ -473,7 +463,7 @@
             elementos_proyecto = ''
             $.each(PROYECTOS, function(k, v) {
                 //console.log(PROYECTOS)
-                console.log(v)
+                //console.log(v)
                 CodigoUnico=v['CodigoUnico']
                 Departamento=v['Departamento']
                 Distrito=v['Distrito']
@@ -503,6 +493,43 @@
             console.log(error)      
             alert('Error al buscar');  
             $('#elementosbsuqueda' ).html('');     
+    })
+
+    }
+    function opciones() {
+        
+            $.ajax({                
+            
+            type : "GET",
+            //url  : "http://127.0.0.1:4000/buscador-basico",
+            url  : LINK+"/sectorconsultas",
+            dataType: "json",
+                     
+                 
+        }).done(function(response){   
+
+            let s_response  = response
+            console.log('OPCIONES: ',s_response)
+            
+            opciones_totales = ''
+            $.each(s_response, function(k, v) {
+                //console.log(CONTRATOS)
+                opcion = "<option value='" + v['NomSec']+ "'>Label " + v['NomSec'] + "</option>"
+                opciones_totales =+ opcion
+                var o = new Option(v['NomSec'], v['NomSec']);
+                /// jquerify the DOM object 'o' so we can use the html method
+                $(o).html(v['NomSec']);
+                $("#secotoresopcion").append(o);
+               
+            });
+            
+            $('#elementosbsuqueda').html(opciones_totales);
+  
+        }).fail(function(error){ 
+            console.log('ERROR')      
+            console.log(error)      
+            alert('Error al obtener  opciones');  
+  
     })
 
     }
