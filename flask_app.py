@@ -13,10 +13,13 @@ def principal():
 @app.route('/buscador')    
 def buscador():
     #Opciones para sectores
-    r = requests.get(URL_FINAL+'/sector')
-    sectores = r.json()
-    opt = [valor['NomSec']  for valor in sectores]
-    opcionessectoreshtml =" ".join([ "<option value='" + x + "'>Label " + x + "</option>"  for x in opt])
+    try:
+        r = requests.get(URL_FINAL+'/sector')
+        sectores = r.json()
+        opt = [valor['NomSec']  for valor in sectores]
+        opcionessectoreshtml =" ".join([ "<option value='" + x + "'>Label " + x + "</option>"  for x in opt])
+    except:
+        opcionessectoreshtml =""
     #Opciones para subsectores
     args={
         'titulo':'Buscador',
