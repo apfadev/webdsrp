@@ -16,11 +16,14 @@ def principal():
 def buscador():
     #Opciones para sectores
     try:
-        r = requests.get(URL_FINAL+'/sector')
+        #r = requests.get(URL_FINAL+'/sector')
+        r = requests.get(URL_FINAL+'/sectorconsultas')
+        
         sectores = r.json()
         opt = [valor['NomSec']  for valor in sectores]
         opcionessectoreshtml =" ".join([ "<option value='" + x + "'>Label " + x + "</option>"  for x in opt])
-    except:
+    except Exception as error:
+        print(error)
         opcionessectoreshtml =""
     #Opciones para subsectores
     args={
