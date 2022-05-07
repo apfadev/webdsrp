@@ -114,7 +114,11 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px black;
 }
 body {
-    font-family: 'Hind', sans-serif;
+    /*font-family: 'Hind', sans-serif;*/
+    /*font-family: 'Koulen', cursive;*/
+    /*font-family: 'Fjalla One', sans-serif;*/
+    font-family: 'Catamaran', sans-serif;
+    
 }
 
 .bd-placeholder-img {
@@ -204,7 +208,7 @@ body {
     border: 5px rgb(133, 12, 12) ;            
     background-color: white;
     color: rgb(133, 12, 12);
-    cursor: pointer;
+    cursor: pointer;    
     /* Green */
 }
 

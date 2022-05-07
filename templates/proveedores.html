@@ -7,35 +7,22 @@
     <h2 class="d-none display-12  texto-rojoraro">Contacto</h2>
 </div>
 <div class="container">
-    <div class="row">
-        <div class="col-12 d-none">
-            <div
-                class="d-flex justify-content-center align-items-center p-3 my-3 text-black bg-purple rounded shadow-sm">
-                <h2 class="display-12  texto-rojoraro">Buscar</h2>
-            </div>
-        </div>
-        <div class="col-12 mb-2">            
+    <div class="row">        
+        <div class="col-12 col-sm-12  col-md-8 mb-2">            
             <p>
                 <div class="form-group">
-                    <label class="font-weight-bold" for="codsnip">Coloca el RUC del Proveedor que quieras evaluar: </label>
-                    <input class="form-control" type="text" id="codsnip" placeholder="Ingrese algún código">
+                    <label class="font-weight-bold" for="codsnip">Coloca el RUC del Proveedor que quieras evaluar: </label>                                        
+                    <div class="input-group mb-3">                        
+                        <input id="RucContratista" type="number" class="form-control" placeholder="RUC" aria-label="RUC" step="1" pattern="^[-/d]/d*$">
+                        <div class="input-group-append">
+                          <button id="btnbuscar" class="btn btn-outline-secondary btnbuscar border border-dark" type="button">Analizar</button>
+                        </div>
+                      </div>
                 </div>
-                <a class="btn btnfiltro w-100" data-toggle="collapse" href="#collapseExample" role="button"
-                    aria-expanded="true" aria-controls="collapseExample">
-                    RÁPIDA
-                </a>
+                
             </p>
             
         </div>        
-        <div class="col-12 mb-2">
-            <div class="row w-100 d-flex justify-content-center">
-                <div class="col-sm-6 border  border-dark btnbuscar text-center rounded">
-                    <h3>Analizar</h3>
-                </div>
-            </div>
-
-
-        </div>
 
     </div>
 </div>
@@ -45,7 +32,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="row">
-                <div class="col-md-12 ">
+                <div class="col-md-12 d-none ">
                     <h4>
                         Registros máximos para proyectos y contratos:
                         <select name="cantidad" id="cantidad">
@@ -58,160 +45,89 @@
                                       
                 </div>
             </div>
-            <div class="row ">
-                
-                <div class="col-md-4 d-flex justify-content-around align-items-center">
+            <div class="row d-none">                
+                <div class="col-md-12 d-flex justify-content-around align-items-center">
                     <h3>
-                        Resultados de la búsqueda
+                        Proveedores con Banderas Rojas Altas 
                     </h3>                    
                 </div>
-                <div class="d-none col-md-4 ">
-                    <button type="button" class="btn btn-secondary btn-lg">Descargar</button>
-                </div>
-                <div class="d-none col-md-4 ">
-                    Items por página <input class="" type="text" id="objetospagina" size="2" class="text-center"
-                        style=" width: 4ch;"> 1 de 2
-                    <a class="btn " href="#" aria-label="Previous">
-                        <h3>&laquo;</h3>
-                    </a>
-                    <a class="btn" href="#" aria-label="Next">
-                        <h3>&raquo;</h3>
-                    </a>
-                </div>
+                
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row d-flex justify-content-around" id="elementosbsuqueda"  style="min-height: 500px;">
         <div class="col-12 mt-2">
             <div class="card">
-                <h5 class="card-header text-center">Título de proyecto</h5>
-                <div class="card-body resultado">
-                    <div class="row">
-                        <div class="col">
-                            <div class="form-group ">
-                                <label class="font-weight-bold " >
-                                    <h2>Tipo de Tarjeta: Contrato</h2>                            
-                                </label>                        
-                            </div>
+                <h5 class="card-header text-center font-weight-bold"> Proveedor 1, RUC: <input class="text-center" type="text" value="12345678910" disabled > </h5>
+                <div class="card-body resultado ">                    
+                    <div class="row border-bottom border-dark rounded p-1 mb-2">
+                        <div class="col-md-2 col-lg-2 d-flex justify-content-around align-items-center">
+                            <i class="fas fa-flag text-danger fa-4x" ></i>                                                        
                         </div>
+                        <div class="col-md-10 col-lg-10">
+                            <div class="form-group">                                                                                                                                                               
+                                <label class="font-weight-bold" >Indicador 1</label>
+                                <p>Miembros de la Conformación Societaria compartidos entre Proveedores.</p>
+                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" value="@valor" disabled>
+                            </div>
+                        </div>                                                                        
                     </div>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-4">
-                            <div class="form-group">
-                                <label class="font-weight-bold" >Código de contrato</label>
-                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" value="@valor" disabled>
-                            </div>
-                            <div class="form-group ">
-                                <label class="font-weight-bold" >Fecha de inicio</label>
-                                <input type="text" class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" value="@valor" disabled>
-                            </div>
-                            <div class="form-group ">
-                                <label class="font-weight-bold" >Sector</label>
-                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" value="@valor" disabled>
-                            </div>
+                    <div class="row border-bottom border-dark rounded p-1 mb-2">
+                        <div class="col-md-2 col-lg-2 d-flex justify-content-around align-items-center">
+                            <i class="fas fa-flag text-danger fa-4x" ></i>                                                        
                         </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="form-group ">
-                                <label class="font-weight-bold" >Entidad Pública Contratante</label>
+                        <div class="col-md-10 col-lg-10">
+                            <div class="form-group">                                                                                                                                                               
+                                <label class="font-weight-bold" >Indicador 2</label>
+                                <p>Intervalo de tiempo, entre lanzamiento de Convocatoria y cierre de Contrato.</p>
                                 <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" value="@valor" disabled>
                             </div>
-                            <div class="form-group ">
-                                <label class="font-weight-bold" >Fecha Fin</label>
-                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" value="@valor" disabled>
-                            </div>
-                            <div class="form-group ">
-                                <label class="font-weight-bold">Número de contrato</label>
-                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" value="@valor" disabled>
-                            </div>
-        
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="form-group ">
-                                <label class="font-weight-bold" >Entidad Contratista-Proveedor</label>
-                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" value="@valor" disabled>
-                            </div>
-                            <div class="form-group ">
-                                <label class="font-weight-bold" >Monto Contratado</label>
-                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" value="@valor" disabled>
-                            </div>
-                            <div class="form-group ">
-                                <label class="font-weight-bold"  >Fecha de Suscripción de Contrato</label>
-                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" value="@valor" disabled>
-                            </div>
-                        </div>
-                        <div class="col-12 text-center d-none">
-                            <button type="button" class="btn btn-secondary btn-lg">Ver detalle</button>
-                        </div>
+                        </div>                                                                        
                     </div>
+                    <div class="row border-bottom border-dark rounded p-1 mb-2">
+                        <div class="col-md-2 col-lg-2 d-flex justify-content-around align-items-center">
+                            <i class="fas fa-flag text-danger fa-4x" ></i>                                                        
+                        </div>
+                        <div class="col-md-10 col-lg-10">
+                            <div class="form-group">                                                                                                                                                               
+                                <label class="font-weight-bold" >Indicador 3</label>
+                                <p>Número de contratistas que visitaron el congreso y/o palacio de gobierno</p>
+                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" value="@valor" disabled>
+                            </div>
+                        </div>                                                                        
+                    </div>
+                    <div class="row border-bottom border-dark rounded p-1 mb-2">
+                        <div class="col-md-2 col-lg-2 d-flex justify-content-around align-items-center">
+                            <i class="fas fa-flag text-danger fa-4x" ></i>                                                        
+                        </div>
+                        <div class="col-md-10 col-lg-10">
+                            <div class="form-group">                                                                                                                                                               
+                                <label class="font-weight-bold" >Indicador 4</label>
+                                <p>Variación del Monto de la Convocatoria y el Contrato.</p>
+                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" value="@valor" disabled>
+                            </div>
+                        </div>                                                                        
+                    </div>
+                    <div class="row border-bottom border-gray rounded p-1 mb-2">
+                        <div class="col-md-2 col-lg-2 d-flex justify-content-around align-items-center">
+                            <i class="fas fa-flag text-danger fa-4x" ></i>                                                        
+                        </div>
+                        <div class="col-md-10 col-lg-10">
+                            <div class="form-group">                                                                                                                                                               
+                                <label class="font-weight-bold" >Indicador 5</label>
+                                <p>Proveedores con mala reputación.</p>
+                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" value="@valor" disabled>
+                            </div>
+                        </div>                                                                        
+                    </div>
+                    
+                    
+                    
                 </div>
         
             </div>
         </div>
-        <div class="col-12 mt-2">
-            <div class="card">
-                <h5 class="card-header text-center">Título de proyecto</h5>
-                <div class="card-body resultado">
-                    <div class="row">
-                        <div class="col">
-                            <div class="form-group ">
-                                <label class="font-weight-bold " >
-                                    <h2>Tipo de Tarjeta: Proyecto</h2>                            
-                                </label>                        
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-4">
-                            <div class="form-group">
-                                <label class="font-weight-bold" >Código de Único:</label>
-                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" value="@valor" disabled>
-                            </div>
-                            <div class="form-group ">
-                                <label class="font-weight-bold" >Departamento:</label>
-                                <input type="text" class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" value="@valor" disabled>
-                            </div>
-                            <div class="form-group ">
-                                <label class="font-weight-bold" >Función:</label>
-                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" value="@valor" disabled>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="form-group ">
-                                <label class="font-weight-bold" >Nombre del Proyecto:</label>
-                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" value="@valor" disabled>
-                            </div>
-                            <div class="form-group ">
-                                <label class="font-weight-bold" >Provincia:</label>
-                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" value="@valor" disabled>
-                            </div>
-                            <div class="form-group ">
-                                <label class="font-weight-bold">Etapa:</label>
-                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" value="@valor" disabled>
-                            </div>
         
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="form-group ">
-                                <label class="font-weight-bold" >Entidad Pública Contratante:</label>
-                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" value="@valor" disabled>
-                            </div>
-                            <div class="form-group ">
-                                <label class="font-weight-bold" >Distrito:</label>
-                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1" value="@valor" disabled>
-                            </div>
-                            <div class="form-group ">
-                                <label class="font-weight-bold"  >Estado del proyecto:</label>
-                                <input type="text"  class="form-control" placeholder="Máximo"  aria-label="Máximo" aria-describedby="basic-addon1"  value="@valor" disabled>
-                            </div>
-                        </div>
-                        <div class="col-12 text-center d-none">
-                            <button type="button" class="btn btn-secondary btn-lg">Ver detalle</button>
-                        </div>
-                    </div>
-                </div>
-        
-            </div>
-        </div>
     </div>
 </div>
 
@@ -244,49 +160,205 @@
 </script>
 <script src="/static/multiselect-easy/easySelect.js"></script>
 <script>
-    $(".demo3").easySelect({
-        buttons: true, // 
-        search: true,
-        placeholder: 'Seleccione opción',
-        placeholderColor: 'green',
-        selectColor: '#524781',
-        itemTitle: 'Opciones',
-        showEachItem: true,
-        width: '80%',
-        dropdownMaxHeight: '450px',
+    LINK ='https://apidscpruebassegundo.herokuapp.com'
+    LINK ='http://127.0.0.1:4000/'
+    buscar();
+    $('#btnbuscar').click(function(){
+        valor = $("#RucContratista").val()                    
+        //make if valor is not empty
+        if(valor!=''){
+            buscar();
+        }else{ alert('Ingrese un RUC');}
+        
     });
-    codsnip
+
     //#Búsqueda básica
     function buscar() {
+        
+        spinner_html = `
+
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>`
+        $('#elementosbsuqueda' ).html(spinner_html);  
 
             $.ajax({                
             
             type : "POST",
-            url  : "http://127.0.0.1:4000/buscador-basico",
-            contentType: 'application/json; charset=utf-8',
+            //url  : "http://127.0.0.1:4000/buscador-basico",
+            url  : LINK+"/buscador_proveedores",
             dataType: "json",
+            contentType: 'application/json; charset=utf-8',            
             data: JSON.stringify({
-                CodigoProyectoInversionPublica: $("#codproyectoinvpublica").val(),
-                CodigoSNIP: $("#codsnip").val(),
-                CodigoConvocatoria: $("#codconvocatoria").val(),
-                NombreContratista: $("#entidadcontratista").val(),
-                NombreContratante: $("#entidadcontratante").val() ,
-                CodigoContrato: $("#codcontrado").val(),
-                MontoTotalContratoMinimo: $("#monotMin").val(),
-                MontoTotalContratoMaximo: $("#monotMax").val(),
-                FechaInicioContrato: $("#fechaInicio").val(),
-                FechaFinContrato: $("#fechaFin").val(),
-                NombreSector: $("#secotoresopcion").val(),              
+                RucContratista: $("#RucContratista").val(),
+                
+                //NumeroResultado:"5",
                     }),     
-        }).done(function(response){        
+        }).done(function(response){               
+            $('#elementosbsuqueda' ).html('');     
+
             let s_response  = response
-            console.log(s_response)
-        }).fail(function(error){       
-            alert('Error al buscar');        
+            
+            //let jsonData = JSON.parse(s_response);
+            jsonData = s_response
+            console.log('jsonData: ',jsonData)
+            var banderaroja_template =`
+            <div class="col-12 mt-2">
+    <div class="card">
+        <h5 class="card-header text-center font-weight-bold"> Proveedor @numproveedor, RUC: <input class="text-center" type="text"
+                value="@rucenvio" disabled> </h5>
+        <div class="card-body resultado ">
+            <div class="row border-bottom border-dark rounded p-1 mb-2">
+                <div class="col-md-2 col-lg-2 d-flex justify-content-around align-items-center">
+                    <i class="fas fa-flag text-danger fa-4x"></i>
+                </div>
+                <div class="col-md-10 col-lg-10">
+                    <div class="form-group">
+                        <label class="font-weight-bold">Indicador 1</label>
+                        <p>Miembros de la Conformación Societaria compartidos entre Proveedores.</p>
+                        <input type="text" class="form-control" placeholder="Máximo" aria-label="Máximo"
+                            aria-describedby="basic-addon1" value="@RedContratistas" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-bottom border-dark rounded p-1 mb-2">
+                <div class="col-md-2 col-lg-2 d-flex justify-content-around align-items-center">
+                    <i class="fas fa-flag text-danger fa-4x"></i>
+                </div>
+                <div class="col-md-10 col-lg-10">
+                    <div class="form-group">
+                        <label class="font-weight-bold">Indicador 2</label>
+                        <p>Intervalo de tiempo, entre lanzamiento de Convocatoria y cierre de Contrato.</p>
+                        <input type="text" class="form-control" placeholder="Máximo" aria-label="Máximo"
+                            aria-describedby="basic-addon1" value="@ContratacionesRapidas" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-bottom border-dark rounded p-1 mb-2">
+                <div class="col-md-2 col-lg-2 d-flex justify-content-around align-items-center">
+                    <i class="fas fa-flag text-danger fa-4x"></i>
+                </div>
+                <div class="col-md-10 col-lg-10">
+                    <div class="form-group">
+                        <label class="font-weight-bold">Indicador 3</label>
+                        <p>Número de contratistas que visitaron el congreso y/o palacio de gobierno</p>
+                        <input type="text" class="form-control" placeholder="Máximo" aria-label="Máximo"
+                            aria-describedby="basic-addon1" value="@ContratistasVisitantes" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-bottom border-dark rounded p-1 mb-2">
+                <div class="col-md-2 col-lg-2 d-flex justify-content-around align-items-center">
+                    <i class="fas fa-flag text-danger fa-4x"></i>
+                </div>
+                <div class="col-md-10 col-lg-10">
+                    <div class="form-group">
+                        <label class="font-weight-bold">Indicador 4</label>
+                        <p>Variación del Monto de la Convocatoria y el Contrato.</p>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon3">Variación de montos contratados negativos</span>
+                            </div>
+                            <input type="text" class="form-control text-center" id="DiferenciasNegativos"  value="@DiferenciasNegativos" aria-describedby="basic-addon3" disabled>
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basicurl">Variación de montos contratados positivos &nbsp;</span>
+                            </div>
+                            <input type="text" class="form-control text-center " id="DiferenciasPositivos" value="@DiferenciasPositivos" aria-describedby="basic-addon3" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-bottom border-dark rounded p-1 mb-2">
+                <div class="col-md-2 col-lg-2 d-flex justify-content-around align-items-center">
+                    <i class="fas fa-flag text-danger fa-4x"></i>
+                </div>
+                <div class="col-md-10 col-lg-10">
+                    <div class="form-group">
+                        <label class="font-weight-bold">Indicador 5</label>
+                        <p>Penalidades.</p>
+                        <input type="text" class="form-control" placeholder="Máximo" aria-label="Máximo"
+                            aria-describedby="basic-addon1" value="@Penalidades" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="row border-bottom border-gray rounded p-1 mb-2">
+                <div class="col-md-2 col-lg-2 d-flex justify-content-around align-items-center">
+                    <i class="fas fa-flag text-danger fa-4x"></i>
+                </div>
+                <div class="col-md-10 col-lg-10">
+                    <div class="form-group">
+                        <label class="font-weight-bold">Indicador 6</label>
+                        <p>Sanciones.</p>
+                        <input type="text" class="form-control" placeholder="Máximo" aria-label="Máximo"
+                            aria-describedby="basic-addon1" value="@Sanciones" disabled>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+</div>
+`;      
+            elementos_banderas = ''
+            //check if jsonData is not empty
+            console.log('jsonData.length',jsonData.length)
+            if(jsonData.length>0){
+                $('#elementosbsuqueda' ).html('No se encontró resultados');
+            }else{
+                k=0
+                $.each([jsonData], function(k, v) {
+                console.log(k)
+                k=+1
+                ContratacionesRapidas=v['ContratacionesRapidas']
+                ContratistasVisitantes=v['ContratistasVisitantes']
+
+                DiferenciasNegativos=v['MontoContratos']['DiferenciasNegativos']
+                DiferenciasPositivos=v['MontoContratos']['DiferenciasPositivos']
+                console.log((v['MontoContratos'])['DiferenciasNegativos'])
+                Penalidades=v['Penalidades']
+
+                RedContratistas=v['RedContratistas']
+                Sanciones    = v['Sanciones']  
+                rucenvio     = $("#RucContratista").val()
+                numproveedor = k
+
+
+
+
+                
+                elementos_banderas += banderaroja_template
+                                        .replace(/@ContratacionesRapidas/g, ContratacionesRapidas)
+                                        .replace(/@ContratistasVisitantes/g, ContratistasVisitantes)
+
+                                        .replace(/@DiferenciasNegativos/g, DiferenciasNegativos)
+                                        .replace(/@DiferenciasPositivos/g, DiferenciasPositivos)
+
+                                        .replace(/@Penalidades/g, Penalidades)
+
+                                        .replace(/@RedContratistas/g, RedContratistas)
+                                        .replace(/@Sanciones/g, Sanciones)                                        
+                                        .replace(/@rucenvio/g, rucenvio)
+                                        .replace(/@numproveedor/g, numproveedor)
+                });
+                $('#elementosbsuqueda' ).html(elementos_banderas);
+            }
+            
+            
+            
+        }).fail(function(error){ 
+            console.log('ERROR')      
+            console.log(error)      
+            alert('Error al buscar');  
+            $('#elementosbsuqueda' ).html('');     
     })
 
     }
-
+    
 
 </script>
 {% endblock %}
