@@ -3,7 +3,9 @@ from turtle import title
 from flask import Flask,render_template,request,json
 import requests
 app = Flask(__name__)
-URL_FINAL = 'http://127.0.0.1:4000'
+#URL_FINAL = 'http://127.0.0.1:4000'
+URL_FINAL = 'https://apidscpruebassegundo.herokuapp.com'
+
 @app.route('/')
 def principal():
     args={
