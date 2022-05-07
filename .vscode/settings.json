@@ -1,0 +1,18 @@
+{
+"terminal.integrated.shell.windows": "C:/Program Files/Git/git-cmd.exe",
+"terminal.integrated.shellArgs.windows": [
+  "--command=usr/bin/bash.exe",
+  "-l",
+  "-i"
+],
+"workbench.colorCustomizations": {
+  "titleBar.activeBackground": "#850C00", // Change this color!
+  "activityBar.background": "#850C00",
+  "minimap.background": "#850C00",
+  "panel.background":"#850C00",
+
+},
+"window.titleBarStyle": "custom"
+
+
+}

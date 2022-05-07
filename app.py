@@ -8,6 +8,7 @@ def principal():
     args={
         'titulo':'Home',
     }
+    pruebamysql.get_prueba()
     return render_template('indexblog.html',**args)
 @app.route('/buscador')    
 def buscador():
