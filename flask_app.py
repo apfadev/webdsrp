@@ -5,7 +5,7 @@ import requests
 app = Flask(__name__)
 #URL_FINAL = 'http://127.0.0.1:4000'
 URL_FINAL = 'https://apidscpruebassegundo.herokuapp.com'
-URL_FINAL = 'https://devspiloto2.deta.dev'
+URL_FINAL = 'https://li6gn7.deta.dev'
 
 @app.route('/')
 def principal():
