@@ -183,26 +183,26 @@
                             <option value="10">10</option>
                             <option value="20" selected>20</option>
                             <option value="50">50</option>
-                            <option value="100">100</option>                            
-                            <option value="100">200</option>                            
-                        </select> 
-                    </h4> 
-                                      
+                            <option value="100">100</option>
+                            <option value="100">200</option>
+                        </select>
+                    </h4>
+
                 </div>
             </div>
             <div class="row ">
-                
+
                 <div class="col-md-4 d-flex justify-content-around align-items-center">
                     <h3>
                         Resultados de la búsqueda
-                    </h3>                    
+                    </h3>
                 </div>
-                
+
             </div>
         </div>
     </div>
     <div class="row d-flex justify-content-around" id="elementosbsuqueda">
-        
+
     </div>
 </div>
 
@@ -236,6 +236,7 @@
 <script src="/static/multiselect-easy/easySelect.js"></script>
 <script>
     LINK ='https://apidscpruebassegundo.herokuapp.com'
+    LINK ='https://devspiloto2.deta.dev'
     //LINK ='http://127.0.0.1:4000/'
 
     //#Búsqueda básica
@@ -255,29 +256,29 @@
                 FechaFinContrato: $("#fechaFin").val(),
                 NombreSector: $("#secotoresopcion").val(),
                 NumeroResultado:$("#cantidad").val(),
-                    }  
-        console.log('OPCIONES: ',k)      
+                    }
+        console.log('OPCIONES: ',k)
         buscar()
     });
-    
-       
-  
+
+
+
     function buscar() {
-        
+
         spinner_html = `
 
         <div class="spinner-border" role="status">
             <span class="sr-only">Loading...</span>
         </div>`
-        $('#elementosbsuqueda' ).html(spinner_html);  
+        $('#elementosbsuqueda' ).html(spinner_html);
 
-            $.ajax({                
-            
+            $.ajax({
+
             type : "POST",
             //url  : "http://127.0.0.1:4000/buscador-basico",
             url  : LINK+"/buscador-basico",
             dataType: "json",
-            contentType: 'application/json; charset=utf-8',            
+            contentType: 'application/json; charset=utf-8',
             data: JSON.stringify({
                 CodigoProyectoInversionPublica: $("#codproyectoinvpublica").val(),
                 CodigoSNIP: $("#codsnip").val(),
@@ -292,9 +293,9 @@
                 NombreSector: $("#secotoresopcion").val(),
                 NumeroResultado:$("#cantidad").val(),
                 //NumeroResultado:"5",
-                    }),     
-        }).done(function(response){   
-            $('#elementosbsuqueda' ).html('');     
+                    }),
+        }).done(function(response){
+            $('#elementosbsuqueda' ).html('');
             let s_response  = response
             let jsonData = JSON.parse(s_response);
             CONTRATOS = jsonData['CONTRATOS']
@@ -308,8 +309,8 @@
                 <div class="col">
                     <div class="form-group ">
                         <label class="font-weight-bold " >
-                            <h2>Tipo de Tarjeta: Contrato</h2>                            
-                        </label>                        
+                            <h2>Tipo de Tarjeta: Contrato</h2>
+                        </label>
                     </div>
                 </div>
             </div>
@@ -365,7 +366,7 @@
 
     </div>
 </div>
-`; 
+`;
             var proyecto_template = `
             <div class="col-12 mt-2" name-div="Proyecto">
     <div class="card">
@@ -375,8 +376,8 @@
                 <div class="col">
                     <div class="form-group ">
                         <label class="font-weight-bold " >
-                            <h2>Tipo de Tarjeta: Proyecto</h2>                            
-                        </label>                        
+                            <h2>Tipo de Tarjeta: Proyecto</h2>
+                        </label>
                     </div>
                 </div>
             </div>
@@ -431,13 +432,13 @@
         </div>
 
     </div>
-</div>       
+</div>
             `;
-     
+
             elementos_contrato = ''
             $.each(CONTRATOS, function(k, v) {
                 //console.log(CONTRATOS)
-                
+
                 CodigoContrato=v['CodigoContrato']
                 EntidadPublica=v['EntidadPublica']
                 FechaFin=v['FechaFin']
@@ -487,31 +488,31 @@
                                         .replace(/@Provincia/g, Provincia)
                                         .replace(/@TipoTarjeta/g, TipoTarjeta)
 
-            });            
+            });
             $('#elementosbsuqueda' ).html(elementos_contrato+elementos_proyecto);
-        }).fail(function(error){ 
-            console.log('ERROR')      
-            console.log(error)      
-            alert('Error al buscar');  
-            $('#elementosbsuqueda' ).html('');     
+        }).fail(function(error){
+            console.log('ERROR')
+            console.log(error)
+            alert('Error al buscar');
+            $('#elementosbsuqueda' ).html('');
     })
 
     }
     function opciones() {
-        
-            $.ajax({                
-            
+
+            $.ajax({
+
             type : "GET",
             //url  : "http://127.0.0.1:4000/buscador-basico",
             url  : LINK+"/sector",
             dataType: "json",
-                     
-                 
-        }).done(function(response){   
+
+
+        }).done(function(response){
 
             let s_response  = response
             console.log('OPCIONES: ',s_response)
-            
+
             opciones_totales = ''
             $.each(s_response, function(k, v) {
                 //console.log(CONTRATOS)
@@ -521,20 +522,20 @@
                 /// jquerify the DOM object 'o' so we can use the html method
                 $(o).html(v['NomSec']);
                 $("#secotoresopcion").append(o);
-               
+
             });
-            
+
             $('#elementosbsuqueda').html(opciones_totales);
-  
-        }).fail(function(error){ 
-            console.log('ERROR')      
-            console.log(error)      
-            alert('Error al obtener  opciones');  
-  
+
+        }).fail(function(error){
+            console.log('ERROR')
+            console.log(error)
+            alert('Error al obtener  opciones');
+
     })
 
     }
-    
+
 
 
 </script>

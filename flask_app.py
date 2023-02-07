@@ -5,6 +5,7 @@ import requests
 app = Flask(__name__)
 #URL_FINAL = 'http://127.0.0.1:4000'
 URL_FINAL = 'https://apidscpruebassegundo.herokuapp.com'
+URL_FINAL = 'https://devspiloto2.deta.dev'
 
 @app.route('/')
 def principal():
@@ -12,13 +13,13 @@ def principal():
         'titulo':'Home',
     }
     return render_template('indexblog.html',**args)
-@app.route('/buscador')    
+@app.route('/buscador')
 def buscador():
     #Opciones para sectores
     try:
-        #r = requests.get(URL_FINAL+'/sector')
-        r = requests.get(URL_FINAL+'/sectorconsultas')
-        
+        r = requests.get(URL_FINAL+'/sector')
+        #r = requests.get(URL_FINAL+'/sectorconsultas')
+
         sectores = r.json()
         opt = [valor['NomSec']  for valor in sectores]
         opcionessectoreshtml =" ".join([ "<option value='" + x + "'>Label " + x + "</option>"  for x in opt])
@@ -33,33 +34,33 @@ def buscador():
         "opcionessectoreshtml":opcionessectoreshtml
     }
     return render_template('buscador.html',**args)
-@app.route('/dashboard')    
+@app.route('/dashboard')
 def dashboard():
     args={
         'titulo':'Dashboard',
         'dashboard':'secciones'
     }
-    return render_template('dashboard.html',**args)        
-@app.route('/proveedores')    
+    return render_template('dashboard.html',**args)
+@app.route('/proveedores')
 def proveedores():
     args={
         'titulo':'Proveedores',
         'proveedores':'secciones'
     }
-    return render_template('proveedores.html',**args)      
-@app.route('/nosotros')    
+    return render_template('proveedores.html',**args)
+@app.route('/nosotros')
 def nosotros():
     args={
-        'titulo':'Nosotros', 
+        'titulo':'Nosotros',
     }
-    return render_template('nosotros.html',**args)   
-@app.route('/contacto')    
+    return render_template('nosotros.html',**args)
+@app.route('/contacto')
 def contacto():
     args={
         'titulo':'Contacto',
     }
-    return render_template('contacto.html',**args)  
-            
+    return render_template('contacto.html',**args)
+
 if __name__ == '__main__':
-    app.run(debug=True) 
+    app.run(debug=True)
 
